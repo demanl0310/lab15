@@ -23,10 +23,10 @@ jobs:
       run: mvn -B package --file my-calculator/pom.xml
     - name: Run checkstyle
       run: mvn checkstyle:check
-      working-directory: lab15/lab15/my-calculator
+      working-directory: my-calculator
     - name: Check JUnit Тест and JaCoCo Coverage 
       run: mvn test jacoco:check
-      working-directory: lab15/lab15/my-calculator
+      working-directory: my-calculator
     - name: Create JaCoCo 
       run:  mvn jacoco:report
-      working-directory: lab15/lab15/my-calculator
+      working-directory: my-calculator
