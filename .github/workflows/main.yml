@@ -1,4 +1,4 @@
-name: Java CI with Maven
+name: Java CI 
 
 on:
   push:
@@ -19,11 +19,14 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
+    - name: Build Maven
       run: mvn -B package --file my-calculator/pom.xml
-    - name: checkstyle shalgah
+    - name: Run checkstyle
       run: mvn checkstyle:check
-    - name: JUnit Тест ба JaCoCo Coverage Шалгах
+      working-directory: lab15/lab15/my-calculator
+    - name: Check JUnit Тест and JaCoCo Coverage 
       run: mvn test jacoco:check
-    - name: JaCoCo Тайлан Үүсгэх
+      working-directory: lab15/lab15/my-calculator
+    - name: Create JaCoCo 
       run:  mvn jacoco:report
+      working-directory: lab15/lab15/my-calculator
