@@ -1,6 +1,9 @@
 package sict.must.edu.mn;
 
 import org.junit.jupiter.api.Test;
+
+import sict.must.edu.mn.Multiplication;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MultiplicationTest {
